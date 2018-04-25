@@ -61,7 +61,7 @@ function isCorrectFeedback() {
   $('.quizBox').empty();
   $('.quizBox').html(`
     <h3>THAT'S RIGHT!</h3>
-    <img src="${STORE[currentQuestion].photo}">
+    <img src="${STORE[currentQuestion].photo}" alt="Capitol building in ${STORE[currentQuestion].correctAnswer} ">
     <h3>${STORE[currentQuestion].correctAnswer}</h3>
     <p>${STORE[currentQuestion].funFact}</p>
     <button type="submit" id="nextQuestionButton">Next Question</button>
@@ -74,7 +74,7 @@ function isIncorrectFeedback() {
   $('.quizBox').html(`
     <h3>Sorry, that's incorrect!</h3>
     <h4>The actual capital of ${STORE[currentQuestion].question} is</h3>
-    <img src="${STORE[currentQuestion].photo}">
+    <img src="${STORE[currentQuestion].photo}" alt="Capitol building in ${STORE[currentQuestion].correctAnswer}">
     <h3>${STORE[currentQuestion].correctAnswer}</h3>
     <p>${STORE[currentQuestion].funFact}</p>
     <button type="submit" id="nextQuestionButton">Next Question</button>
